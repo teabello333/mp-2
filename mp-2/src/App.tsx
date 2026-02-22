@@ -17,7 +17,7 @@ export default function App() {
     async function fetchData(): Promise<void> {
       const rawData = await fetch(
         //universities with the word "middle" in their name
-        "https://universities.hipolabs.com/search?name=middle");
+        "http://universities.hipolabs.com/search?name=middle");
       const json: { name: string; country: string; web_pages: string[] }[] =
         await rawData.json();
 
